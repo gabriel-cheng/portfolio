@@ -1,0 +1,184 @@
+#main-container {
+    margin: 110px 0 0 0;
+}
+
+#main-container::after {
+    margin: 10vh 0 0 0;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.281);
+    position: absolute;
+}
+
+/* Sessão 1 */
+
+.main-content-section-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-content-info-items {
+    margin: 0 0 130px 0;
+    width: 40vw;
+}
+
+
+.main-content-info-name {
+    margin: 0 0 30px 0;
+    font-size: 1.7em;
+    transition: all 0.3s;
+}
+
+.main-content-info-name:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.main-content-info-profission {
+    font-size: 3em;
+    transition: all 0.3s;
+}
+
+.main-content-info-profission:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.main-content-info-description {
+    transition: all 0.3s;
+}
+
+.main-content-info-description:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.main-content-info-picture {
+    width: 100vh;
+    transition: all 0.3s;
+}
+
+/* Fim sessão 1 */
+
+/* Sessão 2 */
+
+.main-content-section-2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-2-box-1, .section-2-box-2, .box-background-effect {
+    width: 40vw;
+    height: 800px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.678);
+    transition: all 0.6s;
+}
+
+.box-background-effect {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.scale-effect:hover {
+    transition: all 0.6s;
+    transform: scale(1.1);
+}
+
+.section-2-box-1 {
+    background-image: url(../images/background/office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-2-box-2 {
+    background-color: black;
+}
+
+
+.box-1-title, .box-2-title {
+    font-size: 2em;
+}
+
+.box-1-button-text, .box-2-button-text {
+    margin: 20px 0 0 0;
+    font-size: 1.1em;
+    color: white;
+    transition: all 0.6s ease-in-out;
+}
+
+.box-1-button-text, .box-2-button-text, .section-2-box-1-button, .section-2-box-2-button {
+    width: 140px;
+}
+
+.box-text-effect:hover {
+    transition: all 0.6s ease-in-out;
+    transform: translateX(30px);
+    /*
+    * ease
+    * linear
+    * ease-in
+    * ease-out
+    * ease-in-out
+    */
+}
+
+.box-1-alternative-text, .box-2-alternative-text {
+    transition: all 0.6s;
+}
+
+.section-2-box-1-button, .section-2-box-2-button {
+    margin: 0 0 190px 0;
+}
+
+.section-2-box-2 {
+    background-image: url(../images/background/programming.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fim sessão 2 */
+
+/* Sessão 3 */
+
+.main-content-section-3 {
+    margin: 20vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3-work {
+    font-size: 2em;
+    transition: all 0.6s ease-in-out;
+    position: relative;
+}
+
+.section-3-work::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.section-3-work:hover::after {
+    width: 100%;
+}
+
+.section-3-work:hover {
+    transition: all 0.6s ease-in-out;
+    transform: translateX(30px);
+}
+
+/* Fim sessão 3 */

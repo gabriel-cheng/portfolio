@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Gabriel Carvalho</title>
+    <link rel="shortcut icon" href="/public/images/icons/portfolio-icon-branco.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/slider.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+</head>
+<body>
+    <header id="topo header-container">
+        <div class="header-content">
+            <a href="#">
+                <div class="header-content-logo">
+                    <img class="header-logo-icon" src="/public/images/icons/portfolio-icon-preto.png" alt="icone do meu portifolio preto">
+                    <div class="header-content-title">
+                        <p class="header-title-name">Gabriel Carvalho</p>
+                        <p class="header-title-profession">Desenvolvedor Web</p>
+                    </div>
+                </div>
+            </a>
+            <div class="header-content-menu">
+                <a target="_blank" class="header-menu-item-linkedin" href="https://www.linkedin.com/in/gabriel-henrique-ita">
+                    <img class="header-social-icon" src="public/images/icons/preto/linkedin-2.png" alt="icone linkedin">
+                </a>
+                <a target="_blank" class="header-menu-item-github" href="https://github.com/gabriel-cheng">
+                    <img class="header-social-icon" src="/public/images/icons/preto/github.png" alt="icone github">
+                </a>
+                <a target="_blank" class="header-menu-item-whatsapp" href="https://web.whatsapp.com/send?phone=5518991163599">
+                    <img class="header-social-icon" src="/public/images/icons/preto/whatsapp.png" alt="icone whatsapp">
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Botão voltar ao topo -->
+    
+    <button onclick="backToTop();" id="btn-top">
+        <img src="public/images/icons/preto/top.png" alt="botão seta pra cima">
+    </button>
+    
+    <!-- Fim botão voltar ao topo -->
+    <main id="main-container">
+        <section class="main-content-section-1">
+            <div class="main-content-info-items">
+                <p class="main-content-info-name">Gabriel Carvalho</p>
+                <p class="main-content-info-profission">Desenvolvedor Web Estudante de Análise e Desenvolvimento de Sistemas</p>
+                <p class="main-content-info-description">Morador do interior de São Paulo, sou estudante e estagiário de Desenvolvimento Web, além de ajudar pessoas a obterem, ou até mesmo dar um upgrade em seu sistema Web através de Freelances.</p>
+            </div>
+            <img class="main-content-info-picture" src="/public/images/background/image-background-1-preto.png" alt="minha imagem">
+        </section>
+        <section class="main-content-section-2">
+            <div class="scale-effect section-2-box-1">
+                <div class="box-background-effect">
+                    <p class="box-1-title">Saiba mais sobre mim</p>
+                    <div class="section-2-box-1-button">
+                        <a href="#">
+                            <p class="box-text-effect box-1-button-text">Saiba mais →</p>
+                        </a>
+                    </div>
+                    <div class="scale-effect box-1-alternative-text">
+                        <p>Nesta sessão você irá conhecer mais sobre mim, conhecerá minha trajetória dentro do mundo do desenvolvimento, meus hobbies, o que estou estudando atualmente, os conhecimentos que carrego e muito mais. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="scale-effect section-2-box-2">
+                <div class="box-background-effect">
+                    <p class="box-2-title">Meus projetos</p>
+                    <div class="section-2-box-2-button">
+                        <a href="#">
+                            <p class="box-text-effect box-2-button-text">Ver projetos →</p>
+                        </a>
+                    </div>
+                    <div class="scale-effect box-2-alternative-text">
+                        <p>Aqui você acompanhará meus projetos desenvolvidos até o momento, podendo acompanhar sempre de forma atualizada minhas competências, conhecimentos adquiridos e até mesmo a evolução que obtive ao longo do tempo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-content-section-3">
+            <p class="section-3-title">Precisa de um desenvolvedor?</p>
+            <a class="section-3-work" href="#">Vamos trabalhar juntos →</a>
+        </section>
+    </main>
+    <footer id="footer-container">
+        <div class="footer-logotype-container">
+            <div class="footer-logotype-container-items">
+                <img class="footer-logo-icon" src="/public/images/icons/portfolio-icon-cinza.png" alt="logo imagem">
+                <div class="footer-logotype-text">
+                    <p class="footer-logotype-text-1">© 2020 - 2022 Gabriel Carvalho</p>
+                    <p class="footer-logotype-text-2">Brasil, 2022, Araçatuba - SP</p>
+                </div>
+            </div>
+            <div class="social-network-container">
+                <p class="social-email">E-mail: gabriel_carvalho.contato@outlook.com</p>
+                <div class="social-whatsapp">
+                    <p>Whatsapp:</p>
+                    <a class="social-whatsapp-link" target="_blank" href="https://web.whatsapp.com/send?phone=5518991163599">
+                        +55 (18) 99116-3599
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="footer-content-section-1">
+            <div class="footer-content-title-1">
+                <h1>Informações</h1>
+            </div>
+            <div class="footer-content-text-1">
+                <p>Se você busca por soluções web, tais como desenvolvimento de sites institucionais, e-commerces e etc, entre em contanto comigo tanto por e-mail, whatsapp, ou Linkedin e vamos trabalhar juntos. </p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        window.onscroll = function() {
+            scroll();
+        }
+        function scroll() {
+            const btn = document.querySelector('#btn-top');
+            if(document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            }
+            else {
+                btn.style.display = "none";
+            }
+        }
+
+        function backToTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

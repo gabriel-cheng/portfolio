@@ -27,17 +27,18 @@ a {
 
 #btn-top {
     position: fixed;
-    bottom: 20px;
-    right: 0;
+    bottom: 50px;
+    right: 60px;
     width: 50px;
     height: 50px;
     border: 0;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.123);
+    background-color: #E0E0E0;
     cursor: pointer;
     transition: 0.5s all ease-in-out;
     padding: 6px 0 0 0;
     display: none;
+    z-index: 1;
 }
 
 #btn-top img {

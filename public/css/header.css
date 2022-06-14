@@ -17,6 +17,7 @@
 .header-content-logo {
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .header-title-name {

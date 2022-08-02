@@ -1,13 +1,36 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const router = express.Router()
+const express = require('express');
+const app = express();
+const exphbs = require('express-handlebars');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname+'/index.html'))
-})
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-app.use('/', router)
-app.listen(process.env.PORT || 8000)
+// Rotas
+(function() {
+    app.get('/projects', (require, response) => {
+        response.render('projects');
+    });
+
+    app.get('/about', (require, response) => {
+        response.render('about');
+    });
+
+    app.get('/work', (require, response) => {
+        response.render('work');
+    });
+
+    app.get('/', (require, response) => {
+        response.render('index');
+    });
+})();
+
+// Portas
+(function() {
+    const port = 3000;
+    app.listen(port, () => {
+        console.log(`Server is running on port: ${port}`);
+        console.log(`Access: http://localhost:${port}`);
+    });
+})();

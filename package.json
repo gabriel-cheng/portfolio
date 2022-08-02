@@ -1,18 +1,18 @@
 {
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
   },
-  "name": "portfolio",
+  "name": "meu_portfolio",
   "description": "",
   "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {},
+  "main": "server.js",
   "engines": {
     "node": "16.13.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

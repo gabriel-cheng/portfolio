@@ -1,6 +1,16 @@
+@import 'header.css';
+@import 'index.css';
+@import 'footer.css';
+@import 'about.css';
+
 @font-face {
     font-family: 'gabriel';
     src: url(../../fonts/Poppins-Thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'gabriel bold';
+    src: url(../../fonts/Poppins-Bold.ttf) format('truetype');
 }
 
 * {
@@ -11,6 +21,10 @@
     font-family: 'gabriel', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 html, body {

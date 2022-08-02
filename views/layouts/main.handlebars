@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Gabriel Carvalho</title>
+    <link rel="shortcut icon" href="/images/icons/portfolio-icon-branco.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/default.css">
+</head>
+<body>
+    <button onclick="backToTop();" id="btn-top">
+        <img src="/images/icons/preto/top.png" alt="botão seta pra cima">
+    </button>
+    
+    {{> header}}
+
+    {{{ body }}}
+    
+    {{> footer}}
+
+<script src="/scripts/button-scale-effect-interval.js"></script>
+<script src="/scripts/menu-toggle.js"></script>
+<script>
+    window.onscroll = function() {
+        scroll();
+    }
+    function scroll() {
+        const btn = document.querySelector('#btn-top');
+        const width = window.screen.width;
+
+        if(document.documentElement.scrollTop > 300 && width > 760) {
+            btn.style.display = "block";
+        }
+        else {
+            btn.style.display = "none";
+        }
+    }
+
+    function backToTop() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

@@ -10,15 +10,15 @@ app.set('view engine', 'handlebars');
 // Rotas
 (function() {
     app.get('/projects', (require, response) => {
-        response.render('projects');
+        response.render('maintenance');
     });
 
     app.get('/about', (require, response) => {
-        response.render('about');
+        response.render('maintenance');
     });
 
     app.get('/work', (require, response) => {
-        response.render('work');
+        response.render('maintenance');
     });
 
     app.get('/', (require, response) => {

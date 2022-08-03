@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');
     });
 
     app.get('/about', (require, response) => {
-        response.render('maintenance');
+        response.render('about');
     });
 
     app.get('/work', (require, response) => {

@@ -98,6 +98,18 @@
     transform: translateX(10px);
 }
 
+.final-section {
+    background-color: #0a0b0f;
+    padding: 2% 10px;
+}
+
+.final-section-text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: none;
+}
+
 @media screen and (max-width: 968px) {
     #footer-container {
         justify-content: space-between;

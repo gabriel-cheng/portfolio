@@ -9,6 +9,14 @@ app.set('view engine', 'handlebars');
 
 // Rotas
 (function() {
+    app.post('/congratulations', (require, response) => {
+        response.render('congratulations');
+    });
+
+    app.get('/sendmail', (require, response) => {
+        response.render('sendmail');
+    });
+
     app.get('/projects', (require, response) => {
         response.render('maintenance');
     });
@@ -19,10 +27,6 @@ app.set('view engine', 'handlebars');
 
     app.get('/contact-form', (require, response) => {
         response.render('contact-form');
-    });
-
-    app.get('/sendmail', (require, response) => {
-        response.render('sendmail');
     });
 
     app.get('/', (require, response) => {

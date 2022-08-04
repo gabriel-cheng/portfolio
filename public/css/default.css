@@ -4,6 +4,7 @@
 @import 'about.css';
 @import 'maintenance.css';
 @import 'contact-form.css';
+@import 'sendmail.css';
 
 @font-face {
     font-family: 'gabriel';

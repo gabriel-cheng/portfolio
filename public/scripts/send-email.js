@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-function send(email, telefone, mensagem) {
+function send(name, email, cellphone, msg) {
     let transporter = nodemailer.createTransport({
         host: 'smtp-mail.outlook.com',
         port: 587,
@@ -17,9 +17,10 @@ function send(email, telefone, mensagem) {
         subject: 'Proposta de trabalho',
         html: `
             <h1>Olá, você recebeu uma nova proposta!</h1><br>
+           <strong>Cliente: </strong>${name}<br>
            <strong>Email: </strong>${email}<br>
-           <strong>Telefone: </strong>${telefone}<br>
-           <strong>Mensagem: </strong>${mensagem}
+           <strong>Telefone: </strong>${cellphone}<br>
+           <strong>Mensagem: </strong>${msg}
         `
     }).then(message => {
         console.log(message);

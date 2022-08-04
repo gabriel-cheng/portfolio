@@ -2,6 +2,24 @@
     <div class="sendmail-title">
         <h1>Enviar e-mail</h1>
     </div>
+    <form action="/congratulations" method="post">
+        <div class="email-area">
+            <label for="input-email">Email</label>
+            <input type="text" name="email" id="input-email" placeholder="ex: meunome@outlook.com" required>
+        </div>
+        <div class="phone-area">
+            <label for="phone">Número para contato</label>
+            <input type="tel" id="phone" name="phone" value="+55 (__) _____ - ____" mask="+55 (__) _____ - ____" placeholder="+55 (__) _____ - ____" required/>
+        </div>
+        <div class="text-area">
+            <label for="textarea">Mensagem</label>
+            <textarea name="message" id="textarea" rows="10" required></textarea>
+        </div>
+        <div class="submit-area">
+            <input id="sendmail-submit" type="submit" value="Enviar">
+        </div>
+    </form>
+<!--
     <form action="https://api.staticforms.xyz/submit" method="post">
         <div class="email-area">
             <label for="input-email">Email</label>
@@ -19,6 +37,7 @@
             <input type="submit" value="Enviar">
         </div>
         <input type="hidden" name="accessKey" value="cc809228-de7e-4848-a19f-e889b53525ec">
-        <input type="hidden" name="redirectTo" value="http://localhost:3000/congratulations">
+        <input type="hidden" name="redirectTo" value="/congratulations">
     </form>
+-->
 </main>

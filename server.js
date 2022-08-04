@@ -1,7 +1,17 @@
 const express = require('express');
 const app = express();
 const exphbs = require('express-handlebars');
+const enviar = require('./public/scripts/send-email.js');
+const bodyParser = require('body-parser');
 
+const dado = {
+    email: '',
+    telefone: '',
+    mensagem: ''
+}
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
@@ -10,7 +20,11 @@ app.set('view engine', 'handlebars');
 // Rotas
 (function() {
     app.post('/congratulations', (require, response) => {
-        response.render('congratulations');
+        response.render('congratulations', enviar.send(
+            require.body.email,
+            require.body.phone,
+            require.body.message
+        ));
     });
 
     app.get('/sendmail', (require, response) => {

@@ -17,8 +17,12 @@ app.set('view engine', 'handlebars');
         response.render('about');
     });
 
-    app.get('/work', (require, response) => {
-        response.render('maintenance');
+    app.get('/contact-form', (require, response) => {
+        response.render('contact-form');
+    });
+
+    app.get('/sendmail', (require, response) => {
+        response.render('sendmail');
     });
 
     app.get('/', (require, response) => {

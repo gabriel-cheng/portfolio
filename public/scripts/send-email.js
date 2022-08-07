@@ -1,4 +1,8 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
+
+const userEmail = process.env.USER_EMAIL;
+const userPass = process.env.USER_PASS;
 
 function send(name, email, cellphone, msg) {
     let transporter = nodemailer.createTransport({
@@ -6,8 +10,8 @@ function send(name, email, cellphone, msg) {
         port: 587,
         secure: false,
         auth: {
-            user: 'cliente.portfolio@outlook.com',
-            pass: 'portfolio@P0RTF0L10'
+            user: `${userEmail}`,
+            pass: `${userPass}`
         }
     });
     

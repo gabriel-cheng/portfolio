@@ -69,3 +69,27 @@
         </div>
     </div>
 </main>
+
+<style scoped>
+    /* Works on Firefox */
+.projects-cards-container {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.projects-cards-container::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+.projects-cards-container::-webkit-scrollbar-track {
+    background: gray;
+}
+
+.projects-cards-container::-webkit-scrollbar-thumb {
+    background-color: rgb(82, 82, 82);
+    border-radius: 20px;
+    /*border: 3px solid orange;*/
+}
+</style>

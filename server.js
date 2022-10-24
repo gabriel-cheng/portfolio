@@ -1,14 +1,8 @@
 const express = require('express');
 const app = express();
 const exphbs = require('express-handlebars');
-const enviar = require('./public/scripts/send-email.js');
 const bodyParser = require('body-parser');
-
-const dado = {
-    email: '',
-    telefone: '',
-    mensagem: ''
-}
+const router = require('./router/router');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,38 +13,19 @@ app.set('view engine', 'handlebars');
 
 // Rotas
 (function() {
-    app.get('/to-view-project', (require, response) => {
-        response.render('maintenance');
-    });
+    app.get('/to-view-project', router);
 
-    app.post('/congratulations', (require, response) => {
-        response.render('congratulations', enviar.send(
-            require.body.name,
-            require.body.email,
-            require.body.phone,
-            require.body.message
-        ));
-    });
+    app.post('/congratulations', router);
 
-    app.get('/sendmail', (require, response) => {
-        response.render('sendmail');
-    });
+    app.get('/sendmail', router);
 
-    app.get('/projects', (require, response) => {
-        response.render('projects');
-    });
+    app.get('/projects', router);
 
-    app.get('/about', (require, response) => {
-        response.render('about');
-    });
+    app.get('/about', router);
 
-    app.get('/contact-form', (require, response) => {
-        response.render('contact-form');
-    });
+    app.get('/contact-form', router);
 
-    app.get('/', (require, response) => {
-        response.render('index');
-    });
+    app.get('/', router);
 })();
 
 // Portas

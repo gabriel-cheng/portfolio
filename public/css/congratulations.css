@@ -1,9 +1,8 @@
 #main-congratulations {
-    margin: 16vh 0 10vh 0;
-    grid-template-areas:
-        'icon'
-        'text'
-    ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .congratulations-icon-container {

@@ -19,6 +19,10 @@ app.set('view engine', 'handlebars');
 
 // Rotas
 (function() {
+    app.get('/to-view-project', (require, response) => {
+        response.render('maintenance');
+    });
+
     app.post('/congratulations', (require, response) => {
         response.render('congratulations', enviar.send(
             require.body.name,
@@ -33,7 +37,7 @@ app.set('view engine', 'handlebars');
     });
 
     app.get('/projects', (require, response) => {
-        response.render('maintenance');
+        response.render('projects');
     });
 
     app.get('/about', (require, response) => {

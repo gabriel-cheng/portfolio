@@ -1,10 +1,11 @@
-@import 'header.css';
 @import 'index.css';
-@import 'footer.css';
 @import 'about.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'projects.css';
+@import 'sendmail.css';
 @import 'maintenance.css';
 @import 'contact-form.css';
-@import 'sendmail.css';
 @import 'congratulations.css';
 
 @font-face {

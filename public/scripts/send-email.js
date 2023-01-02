@@ -4,6 +4,8 @@ const nodemailer = require('nodemailer');
 const userEmail = process.env.USER_EMAIL;
 const userPass = process.env.USER_PASS;
 
+console.log(userEmail);
+
 function send(name, email, cellphone, msg) {
     let transporter = nodemailer.createTransport({
         host: 'smtp-mail.outlook.com',
@@ -14,9 +16,9 @@ function send(name, email, cellphone, msg) {
             pass: `${userPass}`
         }
     });
-    
+
     transporter.sendMail({
-        from: 'Cliente Portfolio <cliente.portfolio@outlook.com>',
+        from: `Cliente Portfolio <${userEmail}>`,
         to: 'gabriel_carvalho.contato@outlook.com',
         subject: 'Proposta de trabalho',
         html: `

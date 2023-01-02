@@ -1,0 +1,56 @@
+<main id="main-congratulations">
+    <div class="congratulations-icon-container">
+        <div class="check-icon">
+            <img src="/images/background/check.png" alt="imagem confirmado">
+        </div>
+    </div>
+    <div class="congratulations-text">
+        <p>
+            Seu e-mail foi enviado com sucesso!
+        </p>
+        <p>Entraremos em contato em breve.</p>
+    </div>
+</main>
+
+<style>
+    #main-congratulations {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .congratulations-icon-container {
+        grid-area: icon;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .check-icon {
+        max-width: 300px;
+        width: 100%;
+    }
+    .check-icon img {
+        width: 100%;
+    }
+    .congratulations-text {
+        text-align: center;
+        grid-area: text;
+    }
+    .congratulations-text p:nth-of-type(1) {
+        font-size: 3.5rem;
+    }
+    .congratulations-text p:nth-of-type(2) {
+        font-size: 1.7rem;
+    }
+    .congratulations-text p {padding: 0 10px;}
+    @media screen and (max-width: 400px) {
+        #main-congratulations {
+            padding: 3vh 0 0 0;
+        }
+        .check-icon {
+            max-width: 300px;
+            width: 70%;
+            min-width: 100px;
+        }
+    }
+</style>

@@ -1,0 +1,154 @@
+<footer id="footer-container">
+    <div class="footer-logotype-container">
+        <div class="footer-logotype-container-items">
+            <img class="footer-logo-icon" src="/images/icons/portfolio-icon-cinza.png" alt="logo imagem">
+            <div class="footer-logotype-text">
+                <p class="footer-logotype-text-1">© 2020 - 2022 Gabriel Carvalho</p>
+                <p class="footer-logotype-text-2">Brasil, 2022, Araçatuba - SP</p>
+            </div>
+        </div>
+        <div class="social-network-container">
+            <p class="social-email">E-mail: gabriel_carvalho.contato@outlook.com</p>
+            <div class="social-whatsapp">
+                <p>Whatsapp: &nbsp</p>
+                <a class="social-whatsapp-link" target="_blank" href="https://web.whatsapp.com/send?phone=5518991163599">
+                    +55 (18) 99116-3599
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="footer-content-section-1">
+        <div class="footer-content-title-1">
+            <h1>Informações</h1>
+        </div>
+        <div class="footer-content-text-1">
+            <p>Se você busca por soluções web, tais como desenvolvimento de sites institucionais, e-commerces e etc, entre em contanto comigo tanto por e-mail, whatsapp, ou Linkedin e vamos trabalhar juntos. </p>
+        </div>
+    </section>
+</footer>
+<div class="final-section">
+    <p class="final-section-text"></p>
+</div>
+
+<style>
+    #footer-container {
+        padding: 10vh 60px 10vh 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+    #footer-container::before {
+        content: " ";
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.281);
+        position: absolute;
+        top: 0;
+    }
+    .footer-logotype-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+    .footer-logotype-container-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer-logotype-text {
+        color: #878a8f;
+        font-weight: 900;
+    }
+    .footer-logotype-text-1 {
+        font-size: 1.38rem;
+    }
+    .footer-logotype-text-2 {
+        font-size: 1.63rem;
+    }
+    .footer-logo-icon {
+        width: 48px;
+        margin: 0 10px 0 0;
+    }
+    .footer-content-text-1 {
+        width: 600px;
+        font-size: 1.3rem
+    }
+    .footer-content-section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .footer-content-title-1 {
+        font-size: 1.6rem;
+    }
+    .social-network-container {
+        margin: 20px 0 0 0;
+        font-size: 1.4rem;
+    }
+    .social-whatsapp {
+        display: flex;
+        flex-direction: row;
+    }
+    .social-whatsapp-link {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+    }
+    .social-whatsapp-link::after {
+        content: " ";
+        width: 0%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.425);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        transition: 0.5s ease-in-out;
+    }
+    .social-whatsapp-link:hover::after {
+        width: 100%;
+    }
+    .social-whatsapp-link:hover {
+        transition: all 0.5s ease-in-out;
+        transform: translateX(10px);
+    }
+    .final-section {
+        background-color: #0a0b0f;
+        padding: 2% 10px;
+    }
+    .final-section-text {
+        color: #fff;
+        text-align: center;
+        font-size: 1.3rem;
+        text-transform: none;
+    }
+    @media screen and (max-width: 968px) {
+        #footer-container {
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 80px 10px 20px 10px;
+            height: 410px;
+        }
+        .social-network-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 95px;
+        }
+        .social-whatsapp {
+            flex-direction: column;
+        }
+        .footer-content-text-1 {
+            max-width: 600px;
+            min-width: 295px;
+            width: 100%;
+        }
+        .footer-logotype-container-items {
+            justify-content: center;
+        }
+    }
+</style>

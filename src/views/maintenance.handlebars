@@ -1,0 +1,42 @@
+<main id="main-maintenance">
+    <div class="maintenance-icon">
+        <img src="/images/background/page-construct.png" alt="imagem de engranagem">
+    </div>
+    <div class="maintenance-text">
+        <p>
+            No momento a página encontra-se em manutenção, por favor, volte mais tarde.
+        </p>
+        <p>
+            Att, Gabriel Carvalho.
+        </p>
+    </div>
+</main>
+
+<style>
+    #main-maintenance {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'icon'
+            'text'
+        ;
+        justify-items: center;
+        margin: 20vh 0 10vh 0;
+    }
+    .maintenance-icon {
+        grid-area: icon;
+    }
+    .maintenance-icon img {
+        max-width: 500px;
+        width: 80vw;
+        min-width: 270px;
+    }
+    .maintenance-text {
+        grid-area: text;
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0 3%;
+    }
+    .maintenance-text p:nth-of-type(1) {margin: 30px 0 0 0;}
+    .maintenance-text p:nth-of-type(2) {margin: 50px 0 0 0;}
+</style>

@@ -1,0 +1,155 @@
+<header id="topo header-container">
+    <div class="header-content">
+        <a href="/">
+            <div class="header-content-logo">
+                <img class="header-logo-icon" src="/images/icons/portfolio-icon-preto.png" alt="icone do meu portifolio preto">
+                <div class="header-content-title">
+                    <p class="header-title-name">Gabriel Carvalho</p>
+                    <p class="header-title-profession">Desenvolvedor Web</p>
+                </div>
+            </div>
+        </a>
+        <div class="menu-nav">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <nav class="header-content-menu">
+                <a target="_blank" class="header-menu-item-linkedin" href="https://www.linkedin.com/in/gabriel-henrique-ita">
+                    <img class="header-social-icon" src="/images/icons/preto/linkedin-2.png" alt="icone linkedin">
+                </a>
+                <a target="_blank" class="header-menu-item-github" href="https://github.com/gabriel-cheng">
+                    <img class="header-social-icon" src="/images/icons/preto/github.png" alt="icone github">
+                </a>
+                <a target="_blank" class="header-menu-item-whatsapp" href="https://web.whatsapp.com/send?phone=5518991163599">
+                    <img class="header-social-icon" src="/images/icons/preto/whatsapp.png" alt="icone whatsapp">
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<style>
+    #header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-content {
+        background-color: #fff;
+        width: 100vw;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    .header-content-logo {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+    .header-title-name {
+        font-size: 1.94rem;
+        font-weight: 600;
+    }
+    .header-title-profession {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    .header-social-icon {
+        width: 40px;
+        transition: all 0.3s;
+    }
+    .header-content-menu img:nth-of-type(1) {margin: 0 10px 0 0;}
+    .header-content-menu img:nth-of-type(2) {margin: 0 10px 0 0;}
+    .header-social-icon:hover {
+        transition: 0.3s;
+        transform: scale(1.1);
+    }
+    .header-logo-icon {
+        width: 45px;
+        margin: 0 10px 0 0;
+    }
+
+    @media screen and (max-width: 690px) {
+        .header-social-icon {
+            width: 70px;
+        }
+        .header-content {
+            justify-content: space-between;
+        }
+        .header-content-menu img:nth-of-type(1) {margin: 0 0 0 0;}
+        .header-content-menu img:nth-of-type(2) {margin: 0 0 0 0;}
+        .header-content-menu {
+            display: none;
+        }
+        .menu-toggle {
+            width: 40px;
+            height: 30px;
+            margin: 9px 0 0 0;
+        }
+        .menu-nav.toggle-on {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-nav.toggle-on .header-content-menu {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .menu-nav.toggle-on .menu-toggle {
+            position: absolute;
+            right: 15px;
+            top: 9px;
+        }
+        .one,
+        .two,
+        .three {
+            background-color: #000;
+            width: #000;
+            height: 5px;
+            width: 100%;
+            margin: 6px auto;
+            transition-duration: 0.3s;
+        }
+        .menu-nav.toggle-on .menu-toggle .one {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .menu-nav.toggle-on .menu-toggle .two {
+            opacity: 0;
+        }
+        .menu-nav.toggle-on .menu-toggle .three {
+            transform: rotate(-45deg) translate(8px, -9px);
+        }
+        .menu-nav.toggle-on .header-content-menu a:not(:last-child) {
+            margin: 0 0 50px 0;
+        }
+    }
+    @media screen and (max-width: 390px) {
+        .header-content {
+            justify-content: space-between;
+        }
+        .header-logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+        .header-title-name {
+            font-size: 1.74rem;
+        }
+        .header-title-profession {
+            font-size: 1.5rem;
+        }
+    }
+</style>

@@ -4,8 +4,6 @@ const nodemailer = require('nodemailer');
 const userEmail = process.env.USER_EMAIL;
 const userPass = process.env.USER_PASS;
 
-console.log(userEmail);
-
 function send(name, email, cellphone, msg) {
     let transporter = nodemailer.createTransport({
         host: 'smtp-mail.outlook.com',

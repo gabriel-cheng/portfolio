@@ -1,0 +1,69 @@
+<main id="main-contact-form">
+    <div class="contact-title">
+        <h1>Como deseja entrar em contato?</h1>
+    </div>
+    <div class="contact-forms">
+        <div class="send-email-contact">
+            <a target="_blank" class="header-menu-item-whatsapp" href="https://web.whatsapp.com/send?phone=5518991163599">
+                Whatsapp
+            </a>
+        </div>
+        <div class="send-linkedin-contact">
+            <a target="_blank" href="https://linkedin.com/in/gabriel-henrique-ita">
+                Linkedin
+            </a>
+        </div>
+        <div class="send-whatsapp-contact">
+            <a href="/sendmail">
+                Enviar um e-mail
+            </a>
+        </div>
+    </div>
+</main>
+
+<style>
+    #main-contact-form {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-title h1 {
+        font-size: 4rem;
+        background-color: rgb(179, 179, 179);
+        padding: 0 15px;
+        margin: 0 0 10px 0;
+    }
+    .send-whatsapp-contact:hover,
+    .send-linkedin-contact:hover,
+    .send-email-contact:hover {
+        background-color: rgb(179, 179, 179);
+        transition: .2s ease-in-out;
+    }
+    .send-whatsapp-contact,
+    .send-linkedin-contact,
+    .send-email-contact {
+        width: 100vw;
+        max-width: 300px;
+        padding: 10px 0;
+        font-size: 2rem;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 885px) {
+        .contact-title h1 {
+            font-size: 5vw;
+        }
+    }
+    @media screen and (max-width: 532px) {
+        .send-whatsapp-contact,
+        .send-linkedin-contact,
+        .send-email-contact {
+            font-size: 6vw;
+            width: 100%;
+        }
+    }
+</style>

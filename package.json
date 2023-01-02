@@ -16,8 +16,8 @@
     "node": "18.12.1"
   },
   "scripts": {
-    "build": "node server.js",
-    "dev": "nodemon server.js",
+    "build": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "fix": "./node_modules/.bin/eslint --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

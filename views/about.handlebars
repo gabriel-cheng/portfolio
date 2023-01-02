@@ -8,7 +8,7 @@
         <p class="parag">
             Olá, muito prazer. Meu nome é Gabriel Henrique Souza de Carvalho. Tenho 24 anos, moro no interior de São Paulo e sou um Desenvolvedor Web. Sou uma pessoa que gosta de conhecer as coisas, também gosto de ensinar algo quando sei, gosto de ajudar as pessoas e gosto de ser quem eu sou. Em relação aos meu hobbies, um dos meus hobbies favoritos é observar planetas e estrelas com meu telescópio Newtoniano de 114mm, também gosto muito de jogos, tais como meus favoritos Dark Souls 3, Elder Scrolls V: Skyrim, Red Dead Redemption 2, The Witcher 3, entre vários outros.
         </p><br>
-        
+
         <h1>Minha trajetória</h1>
         <p class="parag">
             Ganhei meu primeiro computador aos 11 anos de idade, em 2009. Foi basicamente aí onde tudo começou, nos tempos livres sempre ficava grudado no computador, quando não jogando, editando vídeos. Houve uma época em que a criação de blogs era muito famosa, e com certeza eu não perdi tempo e logo comecei a mexer com bloggers do blogspot, onde tive meus primeiros contatos com HTML e Javascript. Fazia sempre blogs relacionados a jogos, que era o que eu mais amava na época, inclusive, tenho um blogspot aberto até hoje, cujo link de acesso é &gt;&gt; <a target="_blank" href="https://expertgames-help.blogspot.com/">https://expertgames-help.blogspot.com/</a> &lt;&lt;.
@@ -34,3 +34,79 @@
     </div>
     <img class="about-image" src="/images/background/about-background.png" alt="imagem sobre">
 </main>
+
+<style>
+    #main-about {
+        margin: 15vh 0 0 0;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'title'
+            'description'
+            'image'
+    ;
+    }
+    .about-title {
+        grid-area: title;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .parag {
+        text-indent: 4ch;
+    }
+    .about-description {
+        grid-area: description;
+        font-size: 1.7rem;
+        width: 85%;
+        margin: 0 0 60px 0;
+    }
+    .about-description p, .parag a {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 100;
+        text-transform: initial;
+    }
+    .parag a {
+        text-decoration: underline;
+    }
+    .about-image {
+        grid-area: image;
+        min-width: 250px;
+        width: 95%;
+        max-width: 450px;
+        position: relative;
+    }
+    @media screen and (max-width: 630px) {
+        .about-description h1:nth-of-type(4) {
+            font-size: 5vw;
+        }
+    }
+    @media screen and (max-width: 461px) {
+        .about-title p:nth-of-type(1) {
+            font-size: 11vw;
+        }
+        .about-title p:nth-of-type(2) {
+            font-size: 10vw;
+        }
+        .about-description h1:nth-of-type(1) {
+            font-size: 8vw;
+        }
+        .about-description h1:nth-of-type(2) {
+            font-size: 8vw;
+        }
+        .about-description h1:nth-of-type(3) {
+            font-size: 6vw;
+        }
+        .about-description h1:nth-of-type(4) {
+            font-size: 5.3vw;
+        }
+    }
+    @media screen and (max-width: 334px) {
+        .about-description h1:nth-of-type(1) {
+            font-size: 8vw;
+        }
+        .about-description h1:nth-of-type(2) {
+            font-size: 7vw;
+        }
+    }
+</style>

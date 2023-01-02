@@ -14,9 +14,9 @@ function send(name, email, cellphone, msg) {
             pass: `${userPass}`
         }
     });
-    
+
     transporter.sendMail({
-        from: 'Cliente Portfolio <cliente.portfolio@outlook.com>',
+        from: `Cliente Portfolio <${userEmail}>`,
         to: 'gabriel_carvalho.contato@outlook.com',
         subject: 'Proposta de trabalho',
         html: `

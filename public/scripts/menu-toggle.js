@@ -5,7 +5,7 @@ const main = document.querySelector('main');
 let show = true;
 
 menuToggle.addEventListener('click', () => {
-    document.body.style.position = show ? "fixed" : "initial";
+    document.body.style.position = show ? 'fixed' : 'initial';
 
     menuSection.classList.toggle('toggle-on', show);
     show = !show;

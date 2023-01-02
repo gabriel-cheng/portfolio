@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+const exphbs = require('express-handlebars');
+const router = require('../router/router');
+const path = require('path');
+
+app.use(express.static('public'));
+
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(router);
+
+module.exports = app;

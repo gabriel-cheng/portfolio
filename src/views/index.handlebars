@@ -7,30 +7,38 @@
         </div>
         <img class="main-content-info-picture" src="/images/background/image-background-1-preto.png" alt="minha imagem">
     </section>
-    <section class="main-content-section-2">
-        <div class="scale-effect section-2-box-1">
-            <div class="box-background-effect">
-                <p class="box-1-title">Saiba mais sobre mim</p>
-                <div class="section-2-box-1-button">
-                    <a href="/about">
-                        <p class="box-text-effect box-1-button-text">Saiba mais →</p>
-                    </a>
-                </div>
-                <div class="scale-effect box-1-alternative-text">
-                    <p>Nesta sessão você irá conhecer mais sobre mim, conhecerá minha trajetória dentro do mundo do desenvolvimento, meus hobbies, o que estou estudando atualmente, os conhecimentos que carrego e muito mais. </p>
+    <section class="section2MainContainer">
+        <div class="sec2Subcontainer">
+            <div class="sec2Card sec2Card1">
+                <div class="sec2CardBackground sec2CardBackground1"></div>
+                <div class="sec2CardContent">
+                    <div class="sec2CardHeader">
+                        <div class="sec2BoxHeaderTitle">
+                            <h1>Saiba mais sobre mim</h1>
+                        </div>
+                        <div class="textTranslateEffect sec2BoxButtonContainer">
+                            <a class="sec2BoxButton" href="/about">Saiba mais →</a>
+                        </div>
+                    </div>
+                    <div class="sec2BoxTextContent">
+                        <p class="scaleEffect">Nesta sessão você irá conhecer mais sobre mim, conhecerá minha trajetória dentro do mundo do desenvolvimento, meus hobbies, o que estou estudando atualmente, os conhecimentos que carrego e muito mais. </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="scale-effect section-2-box-2">
-            <div class="box-background-effect">
-                <p class="box-2-title">Meus projetos</p>
-                <div class="section-2-box-2-button">
-                    <a href="/projects">
-                        <p class="box-text-effect box-2-button-text">Ver projetos →</p>
-                    </a>
-                </div>
-                <div class="scale-effect box-2-alternative-text">
-                    <p>Aqui você acompanhará meus projetos desenvolvidos até o momento, podendo acompanhar sempre de forma atualizada minhas competências, conhecimentos adquiridos e até mesmo a evolução que obtive ao longo do tempo.</p>
+            <div class="sec2Card sec2Card2">
+                <div class="sec2CardBackground sec2CardBackground2"></div>
+                <div class="sec2CardContent">
+                    <div class="sec2CardHeader">
+                        <div class="sec2BoxHeaderTitle">
+                            <h1>Meus projetos</h1>
+                        </div>
+                        <div class="textTranslateEffect sec2BoxButtonContainer">
+                            <a class="sec2BoxButton" href="/projects">Ver projetos →</a>
+                        </div>
+                    </div>
+                    <div class="sec2BoxTextContent">
+                        <p class="scaleEffect">Aqui você acompanhará meus projetos desenvolvidos até o momento, podendo acompanhar sempre de forma atualizada minhas competências, conhecimentos adquiridos e até mesmo a evolução que obtive ao longo do tempo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,6 +48,27 @@
         <a class="section-3-work" href="/contact-form">Vamos trabalhar juntos →</a>
     </section>
 </main>
+
+<script>
+    const button = document.querySelector('.section-3-work');
+
+    if(button) {
+        function intervalEffect(button) {
+            setInterval(() => {
+                setTimeout(() => {
+                    button.classList.toggle('scaleInterval');
+                }, 500);
+                setTimeout(() => {
+                    button.classList.toggle('scaleInterval');
+                }, 1200);
+            }, 6000);
+        }
+
+        intervalEffect(button);
+    } else {
+        console.log('Itens não encontrados.');
+    }
+</script>
 
 <style>
     #main-container {
@@ -86,70 +115,103 @@
         max-width: 625px;
         transition: all 0.3s;
     }
-    .main-content-section-2 {
+    .section2MainContainer {
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: center;
+    }
+    .sec2Subcontainer {
+        max-width: 2700px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .sec2Card {
+        max-width: 600px;
+        width: 100%;
+        height: 700px;
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.678);
+    }
+    .sec2Card1 {
+        margin: 0 80px 0 0;
+    }
+    .sec2Card:hover > .sec2CardBackground {
+        transform: scale(1.1);
+        transition: .2s ease-in-out;
+    }
+    .sec2CardBackground {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom:0;
+        z-index: -1;
+        transition: .2s ease-in-out;
+    }
+    .sec2CardBackground1 {
+        background-image: url('../images/background/office.jpg');
+    }
+    .sec2CardBackground2 {
+        background-image: url('../images/background/programming.jpg');
+    }
+    .sec2CardContent {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sec2CardHeader {
+        height: 70%;
+    }
+    .sec2BoxHeaderTitle {
+        text-align: center;
+        width: 100%;
+    }
+    .sec2BoxHeaderTitle
+    h1 {
+        color: #fff;
+        font-size: 3rem;
+    }
+    .sec2BoxButtonContainer {
+        margin: 25px 0 0 0;
+        transition: all 0.4s ease-in-out;
+        display: inline-block;
+    }
+    .sec2BoxButton {
+        color: #fff !important;
+        font-size: 2.3rem !important;
+    }
+    .sec2BoxTextContent {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .sec2BoxTextContent
+    p {
+        color: #fff;
+        transition: all 0.6s;
+        font-size: 1.6rem;
+    }
+    .textTranslateEffect:hover {
+        transition: all 0.4s ease-in-out;
+        transform: translateX(30px);
     }
     .scaleInterval {
         transition: none;
         transform: translateX(30px);
     }
-    .scale-effect:hover {
+    .scaleEffect:hover {
         transition: all 0.6s;
         transform: scale(1.1);
-    }
-    .section-2-box-1, .section-2-box-2, .box-background-effect {
-        width: 40vw;
-        height: 800px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.678);
-        transition: all 0.6s;
-    }
-    .box-background-effect {
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        text-align: center;
-    }
-    .box-1-title, .box-2-title {
-        font-size: 3rem;
-    }
-    .section-2-box-1 {
-        background-image: url(../images/background/office.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    .section-2-box-2 {
-        background-color: black;
-    }
-    .box-1-button-text, .box-2-button-text {
-        margin: 20px 0 0 0;
-        font-size: 1.8rem;
-        color: white;
-        transition: all 0.6s ease-in-out;
-    }
-    .box-1-button-text, .box-2-button-text, .section-2-box-1-button, .section-2-box-2-button {
-        width: 100%;
-        text-align: initial;
-    }
-    .box-text-effect:hover {
-        transition: all 0.6s ease-in-out;
-        transform: translateX(30px);
-    }
-    .box-1-alternative-text, .box-2-alternative-text {
-        font-size: 1.7rem;
-        transition: all 0.6s;
-    }
-    .section-2-box-1-button, .section-2-box-2-button {
-        margin: 0 0 190px 0;
-    }
-    .section-2-box-2 {
-        background-image: url(../images/background/programming.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
     }
     .main-content-section-3 {
         margin: 20vh 0 0 0;
@@ -200,47 +262,46 @@
         .main-content-info-profission {
             font-size: 2.3rem;
         }
-        .box-background-effect {
-            padding: 20px;
-        }
     }
-    @media screen and (max-width: 863px) {
-        .box-1-title, .box-2-title {
-            font-size: 2.5rem;
+    @media screen and (max-width: 977px) {
+        .sec2Subcontainer {
+            flex-direction: column;
+            align-items: center;
+        }
+        .sec2Card1 {
+            margin: 0 0 40px 0;
         }
     }
     @media screen and (max-width: 760px) {
-        .scale-effect:hover {
-            transition: none;
-            transform: initial;
-        }
-        .main-content-section-2 {
+        .section2MainContainer {
             flex-direction: column;
-        }
-        .section-2-box-1, .section-2-box-2, .box-background-effect {
-            width: 90vw;
-            max-width: 425px;
-            min-width: 288px;
-            min-height: 352px;
-            height: 70vh;
-        }
-        .section-2-box-2 {
-            margin: 20px 0 0 0;
-        }
-        .box-background-effect {
-            padding: 5%;
-        }
-        .box-1-alternative-text, .box-2-alternative-text {
-            font-size: 1.5rem;
-        }
-        .section-2-box-1-button, .section-2-box-2-button {
-            margin: 0 0 13% 0 ;
         }
         .main-content-section-3 {
             width: 100vw;
         }
         .section-3-work {
             font-size: 2.2rem;
+        }
+    }
+    @media screen and (max-width: 520px) {
+        .sec2Card {
+            height: 90vw;
+            min-height: 468px;
+        }
+        .sec2CardContent {
+            padding: 30px 20px
+        }
+    }
+    @media screen and (max-width: 394px) {
+        .sec2CardHeader {
+            height: 50%;
+        }
+        .sec2BoxHeaderTitle
+        h1 {
+            font-size: 7vw;
+        }
+        .sec2BoxButton {
+            font-size: 5vw !important;
         }
     }
 </style>

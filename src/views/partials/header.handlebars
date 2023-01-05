@@ -17,17 +17,26 @@
             </div>
             <nav class="header-content-menu">
                 <a target="_blank" class="header-menu-item-linkedin" href="https://www.linkedin.com/in/gabriel-henrique-ita">
-                    <img class="header-social-icon" src="/images/icons/linkedin-preto.png" alt="icone linkedin">
+                    <img class="header-social-icon linkedin" src="/images/icons/linkedin-preto.png" alt="icone linkedin">
                 </a>
                 <a target="_blank" class="header-menu-item-github" href="https://github.com/gabriel-cheng">
-                    <img class="header-social-icon" src="/images/icons/github-preto.png" alt="icone github">
+                    <img class="header-social-icon github" src="/images/icons/github-preto.png" alt="icone github">
                 </a>
                 <a target="_blank" class="header-menu-item-whatsapp" href="https://web.whatsapp.com/send?phone=5518991163599">
-                    <img class="header-social-icon" src="/images/icons/whatsapp-preto.png" alt="icone whatsapp">
+                    <img class="header-social-icon whatsapp" src="/images/icons/whatsapp-preto.png" alt="icone whatsapp">
                 </a>
                 <a target="_blank" class="header-menu-item-curriculo" href="https://drive.google.com/u/0/uc?id=16jIM6ljtw9VYiZaxm8rXgXKkxAcsITFK&export=download">
-                    <img class="header-social-icon" src="/images/icons/curriculo-preto.png" alt="icone whatsapp">
+                    <img class="header-social-icon curriculo" src="/images/icons/curriculo-preto.png" alt="icone whatsapp">
                 </a>
+                <div class="themeControllContainer">
+                    <input type="checkbox" id="checkbox">
+
+                    <label for="checkbox" class="darkModeButtonLabel">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
             </nav>
         </div>
     </div>
@@ -46,6 +55,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
         position: fixed;
         top: 0;
         z-index: 10;
@@ -67,8 +77,13 @@
         width: 50px;
         transition: all 0.3s;
     }
-    .header-content-menu img:nth-of-type(1) {margin: 0 10px 0 0;}
-    .header-content-menu img:nth-of-type(2) {margin: 0 10px 0 0;}
+    .header-content-menu {
+        display: flex;
+        align-items: center;
+    }
+    .header-content-menu a {
+        margin: 0 10px 0 0;
+    }
     .header-social-icon:hover {
         transition: 0.3s;
         transform: scale(1.1);
@@ -76,6 +91,9 @@
     .header-logo-icon {
         width: 45px;
         margin: 0 10px 0 0;
+    }
+    .menu-nav {
+        transition: .3s ease-in-out !important;
     }
     @media screen and (max-width: 690px) {
         .header-social-icon {
@@ -114,7 +132,7 @@
         .menu-nav.toggle-on .menu-toggle {
             position: absolute;
             right: 15px;
-            top: 9px;
+            top: 16px;
         }
         .one,
         .two,
@@ -138,6 +156,9 @@
         .menu-nav.toggle-on .header-content-menu a:not(:last-child) {
             margin: 0 0 50px 0;
         }
+        .themeControllContainer {
+            margin: 0;
+        }
     }
     @media screen and (max-width: 390px) {
         .header-content {
@@ -152,6 +173,9 @@
         }
         .header-title-profission {
             font-size: 1.5rem;
+        }
+        .menu-nav.toggle-on .menu-toggle {
+            top: 14px;
         }
     }
 </style>

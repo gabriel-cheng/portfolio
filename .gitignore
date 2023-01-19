@@ -1,6 +1,7 @@
 # Specifics
 docs/
 package-lock.json
+blog/
 
 # Logs
 logs

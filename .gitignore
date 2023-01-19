@@ -1,4 +1,7 @@
+# Specifics
 docs/
+package-lock.json
+
 # Logs
 logs
 *.log

@@ -1,201 +1,465 @@
-<main id="main-projects">
-    <div class="projects-section-inital">
-        <p>Projetos</p>
-    </div>
-    <div class="projects-cards-container">
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-1">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-2">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-3">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-4">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-5">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-6">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-7">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-        <div class="projects-card-subcontainer">
-            <a href="/to-view-project" class="project-card projects-card-8">
-                <p>Seu site aqui</p>
-                <div class="card-painel">
-                    <p>Por enquanto não temos projetos...</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</main>
-
-<style scoped>
-.projects-cards-container {
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
+<style>
+#projectsContainer {
+    padding: 85px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.projects-cards-container::-webkit-scrollbar {
-    width: 12px;
-    height: 10px;
+.projectsSubcontainer {
+    max-width: 2700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.projects-cards-container::-webkit-scrollbar-track {
-    background: gray;
-}
-.projects-cards-container::-webkit-scrollbar-thumb {
-    background-color: rgb(82, 82, 82);
-    border-radius: 20px;
-}
-#main-projects {
-    margin: 85px 0 0 0;
-    background-color: black;
+.projectCardscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 20px;
     width: 100%;
 }
-.projects-section-inital {
-    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0) 100%), url('https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    background-repeat: no-repeat;
+.projectCard {
+    max-width: 400px;
+    width: 100%;
+}
+.projectCardContent {
+    background-color: #13131fbe;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.projectCardContent::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #8257E6;
+    position: absolute;
+    bottom: 0;
+}
+.projectCardImageBackground {
+    background-image: url("/images/background/office.png");
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 400px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+.projectCardTitle h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: initial;
+    letter-spacing: 2px;
+    color: #fff !important;
+    text-align: center;
+}
+.projectCardFerramentas {
+    margin: 15px 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
-    color: #fff;
+    flex-wrap: wrap;
 }
-.projects-cards-container {
+.projectCardFerramentas img {
+    width: 40px;
+    max-height: 40px;
+    height: auto;
+    margin: 20px 0 0 0;
+}
+.projectCardFerramentas img:not(:last-child) {
+    margin: 0 15px 0 0;
+}
+.cardFooter {
     width: 100%;
-    padding: 0 20px;
+    height: 70px;
+    background-color: #212121;
+    border-radius: 0 0 25px 25px;
+}
+.cardFooterSubcontainer {
+    border-radius: 0 0 25px 25px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    overflow: auto;
+    align-items: center;
+    justify-content: space-around;
 }
-.projects-card-1 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('/images/background/programming.jpg');
-    grid-area: card-1;
+.cardFooterStatus p {
+    color: #fff !important;
+    font-size: 1.6rem;
 }
-.projects-card-2 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    grid-area: card-2;
+.cardFooterButton button {
+    cursor: pointer;
+    outline: 0;
+    border: 1px solid #8257E6;
+    background-color: transparent;
+    color: #fff !important;
+    padding: 5px 8px;
+    border-radius: 20px;
+    transition: .1s ease-in-out;
 }
-.projects-card-3 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1585938389612-a552a28d6914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80');
-    grid-area: card-3;
+.cardFooterButton button:hover {
+    background-color: #8257E6;
+    transition: .1s ease-in-out;
 }
-.projects-card-4 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    grid-area: card-4;
+.opened {
+    z-index: 999 !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    transition: .2s ease-in-out;
 }
-.projects-card-5 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
-    grid-area: card-5;
-}
-.projects-card-6 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=815&q=80');
-    grid-area: card-6;
-}
-.projects-card-7 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    grid-area: card-7;
-}
-.projects-card-8 {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.719) 50%), url('https://images.unsplash.com/photo-1646682230141-c951e046df27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    grid-area: card-8;
-}
-.projects-card-subcontainer {
-    max-width: 332px;
-    height: 352px;
-    padding: 5px 10px;
+.modalBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    border: 1px solid #fff;
+    z-index: 999;
+    background-color: #00000088;
+    display: none;
+}
+.projectModalContainer {
+    z-index: -999;
+    position: fixed;
+    top: -99%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
     display: flex;
     justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+.projectModalSubcontainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.projectModalContent {
+    background-color: #13131F;
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+}
+.modalSocialsContainer {
+    margin: 25px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.modalSocialbtn {
+    background-color: #8257E6;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    margin: 5px;
+    width: 160px;
+    height: 35px;
+}
+.modalSocialbtn:hover {
+    background-color: #6329eb;
+}
+.modalSocialbtn:active {
+    background-color: #4a00f7;
+}
+.modalContent1 {
+    margin: 0 40px 0 0;
+}
+.modalVideoContainer
+video {
+    width: 500px;
+}
+.modalContent2 {
+    position: relative;
+}
+.modalProjectTitle {
     margin: 0 0 10px 0;
 }
-.projects-card-subcontainer:not(:last-child) {
-    margin: 0 30px 0 0;
-}
-.project-card {
-    position: relative;
-    max-width: 290px;
-    width: 100%;
-    min-width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+.modalProjectTitle h1 {
     font-weight: 600;
-    font-size: 2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    transition: .3s ease-in-out;
+    font-size: 2.5rem;
+    color: #6329eb;
 }
-.project-card:hover {
-    transform: translateY(-10px);
-    transition: .3s ease-in-out;
+.modalProjectDescription {
+    max-height: 250px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 10px 0 0;
 }
-.project-card:not(:last-child) {
-    margin: 0 10px 0 0;
+.modalProjectDescription::-webkit-scrollbar {
+    height: 5px;
 }
-.project-card, .project-image {
-    max-width: 322px;
-    height: 300px;
+.modalProjectDescription::-webkit-scrollbar-track {
+    background-color: #1313;
+    padding: 2px;
 }
-.card-painel {
-    background-color: #fff;
-    width: 270px;
-    height: 100px;
+.modalProjectDescription::-webkit-scrollbar-thumb {
+    background-color: #4a00f7;
+    border-radius: 5px;
+}
+.modalProjectDescription p {
+    text-transform: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.projectStatus {
     position: absolute;
-    bottom: -40px;
-    border: 1px solid black;
-    padding: 10px;
+    bottom: 0;
+    right: 0;
+    background-color: #4a00f7;
+    padding: 10px 40px;
+}
+.projectStatus p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 11vw;
+    color: #4a00f7;
+    font-size: 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: aliceblue;
+    width: 30px;
+    height: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    font-size: 1.2rem;
-    color: #000;
+    align-items: center;
+    border-radius: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 1;
+}
+.closeModal:hover {
+    background-color: rgb(180, 186, 192);
+}
+.closeModal:active {
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+@media screen and (max-width: 1090px) {
+    .modalContent1 {
+        margin: 25px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modalSocialsContainer {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 25px 0;
+    }
+    .modalVideoContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .modalVideoContainer
+    video {
+        max-width: 700px;
+        width: 100%;
+    }
+    .projectModalContent {
+        flex-direction: column;
+        position: unset;
+        overflow-y: auto;
+        max-height: 600px;
+        height: 100vh;
+        width: 95vw;
+        padding: 20px;
+    }
+    .closeModal {
+        top: 7px;
+        right: 10px;
+    }
+    .modalContent2 {
+        padding: 0 0 50px 0;
+    }
+}
+@media screen and (max-width: 398px) {
+    .cardFooterStatus p {
+        font-size: 4vw;
+    }
 }
 </style>
+
+<section id="projectsContainer">
+    <div class="projectsSubcontainer">
+        <div class="projectCardscontainer"></div>
+        <div class="modalBg"></div>
+        <div class="projectModalContainer">
+            <div class="projectModalSubcontainer">
+                <div onclick="closeModal();" class="closeModal">X</div>
+                <div class="projectModalContent">
+                    <div class="modalContent1">
+                        <div class="modalVideoContainer">
+                            <video autoplay muted loop controls>
+                                <source src="/images/background/4.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="modalSocialsContainer">
+                            <a href="">
+                                <button class="modalSocialbtn">Acessar projeto</button>
+                            </a>
+                            <a href="">
+                                <button class="modalSocialbtn">Acessar repositório</button>
+                            </a>
+                            <a href="">
+                                <button class="modalSocialbtn">Postagem no Linkedin</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modalContent2">
+                        <div class="modalProjectTitle">
+                            <h1>API Dark Souls</h1>
+                        </div>
+                        <div class="modalProjectDescription">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
+                            </p>
+                        </div>
+                        <div class="projectStatus">
+                            <p>Em andamento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    mountCards();
+
+    async function mountCards() {
+        const url = "http://localhost:5000/posts";
+
+        try {
+            await fetch(url, {
+                method: "GET",
+                headers: {
+                    "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UwMjg4NWVjMThkM2NkM2Y4MmY5YyIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY3NDQ1Mjk2OX0.1oH9Wp8Xa3vhawsif7BL3sKAhqOwTvXHhsWCxLmlQuc"
+                }
+            })
+            .then(e => e.json())
+            .then((e) => {
+                console.log(e[0]);
+                for(let i = 0; i < e.length; i++) {
+                    const img = e[i].pictureSrc.split("\\")[2];
+                    createNewCard(e[i].titulo, e[i].status, e[i].ferramentas, img);
+                }
+            });
+        } catch(err) {
+            console.log({request_all_posts_error: err});
+        }
+    }
+
+    function createNewCard(title, status, ferramentas, bgImage) {
+        const projectCardscontainer = document.querySelector(".projectCardscontainer");
+        const projectCard = generateNewHTMLElement("div", "projectCard");
+        const projectCardContent = generateNewHTMLElement("div", "projectCardContent");
+        const projectCardImageBackground = generateNewHTMLElement("div", "projectCardImageBackground");
+        const projectCardTitle = generateNewHTMLElement("div", "projectCardTitle");
+        const h1 = generateNewHTMLElement("h1");
+        const projectCardFerramentas = generateNewHTMLElement("div", "projectCardFerramentas");
+        const cardFooter = generateNewHTMLElement("div", "cardFooter");
+        const cardFooterSubcontainer = generateNewHTMLElement("div", "cardFooterSubcontainer");
+        const cardFooterStatus = generateNewHTMLElement("div", "cardFooterStatus");
+        const p = generateNewHTMLElement("p");
+        const cardFooterButton = generateNewHTMLElement("div", "cardFooterButton");
+        const openProjectBtn = generateNewHTMLElement("button", "openProjectBtn");
+
+        p.textContent = status;
+        insertHTMLElementInto(cardFooterStatus, p);
+        insertHTMLElementInto(cardFooterSubcontainer, cardFooterStatus);
+        openProjectBtn.textContent = "Visualizar projeto"
+        openProjectBtn.onclick = () => {
+            openModal();
+        }
+        insertHTMLElementInto(cardFooterButton, openProjectBtn);
+        insertHTMLElementInto(cardFooterSubcontainer, cardFooterButton);
+        insertHTMLElementInto(cardFooter, cardFooterSubcontainer);
+        h1.textContent = title;
+        insertHTMLElementInto(projectCardTitle, h1);
+        projectCardImageBackground.style = `background-image: url(http://localhost:5000/posts/files/${bgImage});`
+        insertHTMLElementInto(projectCardContent, projectCardImageBackground);
+        insertHTMLElementInto(projectCardContent, projectCardTitle);
+        for(let i = 0; i < ferramentas.length; i++) {
+            const img = generateNewHTMLElement("img");
+
+            img.src = `/images/ferramentas/${ferramentas[i]}.png`;
+            img.alt = `icone ${ferramentas[i]}`;
+
+            insertHTMLElementInto(projectCardFerramentas, img);
+        }
+        insertHTMLElementInto(projectCardContent, projectCardFerramentas);
+        insertHTMLElementInto(projectCard, projectCardContent);
+        insertHTMLElementInto(projectCard, cardFooter);
+
+        insertHTMLElementInto(projectCardscontainer, projectCard);
+    }
+
+    function insertHTMLElementInto(HTMLElement1, HTMLElement2) {
+        const newElement = HTMLElement1.appendChild(HTMLElement2);
+
+        return newElement;
+    }
+
+    function generateNewHTMLElement(HTMLElement, __class = null) {
+        const newHTMLElement = document.createElement(HTMLElement);
+
+        if(__class != null) {
+            newHTMLElement.classList.add(__class);
+        }
+
+        return newHTMLElement;
+    }
+
+    function closeModal() {
+        const projectModalContainer = document.querySelector(".projectModalContainer");
+        const modalBg = document.querySelector(".modalBg");
+
+        projectModalContainer.classList.toggle("opened");
+        document.body.style.overflow = "initial";
+        modalBg.style.display = "none";
+    }
+
+    function openModal() {
+        const projectModalContainer = document.querySelector(".projectModalContainer");
+        const modalBg = document.querySelector(".modalBg");
+
+        projectModalContainer.classList.toggle("opened");
+        document.body.style.overflow = "hidden";
+        modalBg.style.display = "block";
+    }
+</script>

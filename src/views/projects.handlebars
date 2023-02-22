@@ -72,7 +72,6 @@
     width: 40px;
     max-height: 40px;
     height: auto;
-    margin: 20px 0 0 0;
 }
 .projectCardFerramentas img:not(:last-child) {
     margin: 0 15px 0 0;
@@ -147,7 +146,7 @@
 .projectModalContent {
     background-color: #13131F;
     display: flex;
-    width: 80%;
+    width: 80vw;
     border-radius: 10px;
     padding: 30px;
     position: relative;
@@ -185,6 +184,7 @@ video {
 }
 .modalContent2 {
     position: relative;
+    width: 100%;
 }
 .modalProjectTitle {
     margin: 0 0 10px 0;
@@ -215,6 +215,7 @@ video {
     text-transform: none;
     font-size: 1.3rem;
     font-weight: 400;
+    overflow-wrap: anywhere;
 }
 .projectStatus {
     position: absolute;
@@ -231,7 +232,7 @@ video {
 .closeModal {
     position: absolute;
     top: 10px;
-    right: 11vw;
+    right: 10px;
     color: #4a00f7;
     font-size: 2.5rem;
     font-weight: 500;
@@ -301,7 +302,9 @@ video {
 
 <section id="projectsContainer">
     <div class="projectsSubcontainer">
+
         <div class="projectCardscontainer"></div>
+
         <div class="modalBg"></div>
         <div class="projectModalContainer">
             <div class="projectModalSubcontainer">
@@ -309,47 +312,29 @@ video {
                 <div class="projectModalContent">
                     <div class="modalContent1">
                         <div class="modalVideoContainer">
-                            <video autoplay muted loop controls>
-                                <source src="/images/background/4.mp4" type="video/mp4">
-                            </video>
+                            <video class="modalProjectVideoBg" autoplay muted loop controls></video>
                         </div>
                         <div class="modalSocialsContainer">
-                            <a href="">
+                            <a class="redirectSocialProjeto" target="_blank">
                                 <button class="modalSocialbtn">Acessar projeto</button>
                             </a>
-                            <a href="">
+                            <a class="redirectSocialRepositorio" target="_blank">
                                 <button class="modalSocialbtn">Acessar repositório</button>
                             </a>
-                            <a href="">
+                            <a class="redirectSocialLinkedin" target="_blank">
                                 <button class="modalSocialbtn">Postagem no Linkedin</button>
                             </a>
                         </div>
                     </div>
                     <div class="modalContent2">
                         <div class="modalProjectTitle">
-                            <h1>API Dark Souls</h1>
+                            <h1 class="modalProjectH1"></h1>
                         </div>
                         <div class="modalProjectDescription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias reprehenderit dolore, dicta assumenda nostrum adipisci commodi facilis dignissimos unde saepe iste voluptatibus natus veniam illo voluptatum asperiores quod ratione quasi.
-                            </p>
+                            <p class="projectDescription"></p>
                         </div>
                         <div class="projectStatus">
-                            <p>Em andamento</p>
+                            <p class="projectStatusP"></p>
                         </div>
                     </div>
                 </div>
@@ -372,11 +357,11 @@ video {
                 }
             })
             .then(e => e.json())
+            .then(e => e.reverse())
             .then((e) => {
-                console.log(e[0]);
                 for(let i = 0; i < e.length; i++) {
                     const img = e[i].pictureSrc.split("\\")[2];
-                    createNewCard(e[i].titulo, e[i].status, e[i].ferramentas, img);
+                    createNewCard(e[i].titulo, e[i].status, e[i].ferramentas, img, e[i]._id);
                 }
             });
         } catch(err) {
@@ -384,7 +369,7 @@ video {
         }
     }
 
-    function createNewCard(title, status, ferramentas, bgImage) {
+    function createNewCard(title, status, ferramentas, bgImage, id) {
         const projectCardscontainer = document.querySelector(".projectCardscontainer");
         const projectCard = generateNewHTMLElement("div", "projectCard");
         const projectCardContent = generateNewHTMLElement("div", "projectCardContent");
@@ -404,7 +389,7 @@ video {
         insertHTMLElementInto(cardFooterSubcontainer, cardFooterStatus);
         openProjectBtn.textContent = "Visualizar projeto"
         openProjectBtn.onclick = () => {
-            openModal();
+            openModal(id);
         }
         insertHTMLElementInto(cardFooterButton, openProjectBtn);
         insertHTMLElementInto(cardFooterSubcontainer, cardFooterButton);
@@ -454,12 +439,46 @@ video {
         modalBg.style.display = "none";
     }
 
-    function openModal() {
+    function openModal(id) {
         const projectModalContainer = document.querySelector(".projectModalContainer");
         const modalBg = document.querySelector(".modalBg");
 
         projectModalContainer.classList.toggle("opened");
         document.body.style.overflow = "hidden";
         modalBg.style.display = "block";
+
+        setModalInformations(id);
+    }
+
+    async function setModalInformations(id) {
+        const videoUrl = document.querySelector(".modalProjectVideoBg");
+        const deploy = document.querySelector(".redirectSocialProjeto");
+        const repositorio = document.querySelector(".redirectSocialRepositorio");
+        const postLinkedin = document.querySelector(".redirectSocialLinkedin");
+        const titulo = document.querySelector(".modalProjectH1");
+        const descricao = document.querySelector(".projectDescription");
+        const status = document.querySelector(".projectStatusP");
+        const url = `http://localhost:5000/posts/${id}`;
+
+        try {
+            await fetch(url, {
+                method: "GET",
+                headers: {
+                    "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UwMjg4NWVjMThkM2NkM2Y4MmY5YyIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY3NDQ1Mjk2OX0.1oH9Wp8Xa3vhawsif7BL3sKAhqOwTvXHhsWCxLmlQuc"
+                }
+            })
+            .then(e => e.json())
+            .then((e) => {
+                videoUrl.src = e.videoUrl;
+                deploy.href = e.deploy;
+                repositorio.href = e.repositorio;
+                postLinkedin.href = e.postLinkedin;
+                titulo.textContent = e.titulo;
+                descricao.textContent = e.descricao;
+                status.textContent = e.status;
+            });
+        } catch(err) {
+            console.log({request_post_by_id_error: err});
+        }
     }
 </script>

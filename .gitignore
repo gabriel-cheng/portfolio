@@ -2,6 +2,8 @@
 docs/
 package-lock.json
 blog/
+public/images/background/4.mp4
+text.html
 
 # Logs
 logs

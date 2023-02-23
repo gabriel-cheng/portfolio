@@ -2,7 +2,7 @@ const enviar = require('../../public/scripts/send-email.js');
 
 module.exports = {
     index: (req, res) => {
-        res.render('index');
+        res.render('maintenance');
     },
     contact: (req, res) => {
         res.render('contact-form');

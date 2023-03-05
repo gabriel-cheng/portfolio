@@ -11,7 +11,7 @@ module.exports = {
         res.render('about');
     },
     projects: (req, res) => {
-        res.render('projects');
+        res.render('projects', {baseURL: process.env.BASE_URL});
     },
     sendMail: (req, res) => {
         res.render('sendmail');

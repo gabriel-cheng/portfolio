@@ -11,5 +11,6 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(router);
+app.use('/private/blog', router);
 
 module.exports = app;

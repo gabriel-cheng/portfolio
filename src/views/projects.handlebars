@@ -344,13 +344,14 @@ video {
 </section>
 
 <script>
+    const baseURL = "{{baseURL}}";
     mountCards();
 
     async function mountCards() {
         const url = "http://localhost:5000/posts";
 
         try {
-            await fetch(url, {
+            await fetch(`${baseURL}/posts`, {
                 method: "GET"
             })
             .then(e => e.json())
@@ -455,10 +456,9 @@ video {
         const titulo = document.querySelector(".modalProjectH1");
         const descricao = document.querySelector(".projectDescription");
         const status = document.querySelector(".projectStatusP");
-        const url = `http://localhost:5000/posts/${id}`;
 
         try {
-            await fetch(url, {
+            await fetch(`${baseURL}/posts/${id}`, {
                 method: "GET"
             })
             .then(e => e.json())
